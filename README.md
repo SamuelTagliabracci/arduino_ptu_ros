@@ -1,5 +1,5 @@
 # Description
-Generic Pan &amp; Tilt Servos controlled by Arduino Nano via ROSSERIAL!
+Generic Pan &amp; Tilt Servos controlled by Arduino Nano via ROSSERIAL
 
 # Install
 cd ~/catkin_ws/src

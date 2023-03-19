@@ -1,0 +1,13 @@
+teleop:
+  ptu:
+    type: topic
+    message_type: geometry_msgs/Twist
+    topic_name: ptu/cmd_vel
+    deadman_buttons: [4]
+    axis_mappings:
+      -
+        axis: 3
+        target: angular.z
+      -
+        axis: 4
+        target: angular.y

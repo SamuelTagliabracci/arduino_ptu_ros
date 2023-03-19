@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- * * * Link Definitions * * * -->
+
+  <link name="ptu_base_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.04 0.02 0.035"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="ptu_base_joint" type="fixed">
+    <parent link="base_link" />
+    <origin xyz="0.220 0 0.250" rpy="0 0 0" />
+    <child link="ptu_base_link" />
+  </joint>
+
+  <link name="ptu_pan_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.04 0.035 0.02"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="ptu_pan_joint" type="revolute">
+    <axis xyz="0 0 1"/>
+    <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/>
+    <parent link="ptu_base_link" />
+    <child link="ptu_pan_link" />
+    <origin xyz="0 0 0.03" rpy="0 3.14 0" />
+  </joint>
+
+  <link name="ptu_tilt_link">
+    <visual>
+      <origin xyz="0 0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.025 0.05 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="ptu_tilt_joint" type="revolute">
+    <axis xyz="0 1 0"/>
+    <limit effort="1000.0" lower="-1.57" upper="1.57" velocity="0.5"/>
+    <parent link="ptu_pan_link" />
+    <child link="ptu_tilt_link" />
+    <origin xyz="0 0 0" rpy="0 1.57 -1.57" />
+  </joint>
+
+  <link name="ptu_mount_link">
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.01 0.001"/>
+      </geometry>
+    </visual>
+  </link>
+
+  <joint name="ptu_mount_joint" type="fixed">
+    <parent link="ptu_tilt_link" />
+    <child link="ptu_mount_link" />
+    <origin xyz="0 0 0.041" rpy="0 0 0" />
+  </joint>
+
+</robot>

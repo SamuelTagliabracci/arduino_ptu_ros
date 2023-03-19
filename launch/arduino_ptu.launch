@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+  <remap from="/ptu/joint_states" to="/joint_states"/>
+  <node name="arduino_ptu_node" pkg="rosserial_python" type="serial_node.py" output="screen">
+    <param name="port" value="/dev/arduino"/>
+    <param name="baud" value="115200"/>
+  </node>
+</launch>

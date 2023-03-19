@@ -20,6 +20,7 @@ rosrun rosserial_python serial_node.py _port:=/dev/arduino _baud:=115200
 
 # Sample Topics
 rostopic pub -1 /ptu/cmd_vel geometric_msgs/Twist
+
 rostopic echo /ptu/jointstate
 
 # Sample joy_teleop.yaml addition

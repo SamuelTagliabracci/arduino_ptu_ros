@@ -3,7 +3,9 @@ Generic Pan &amp; Tilt Servos controlled by Arduino Nano via ROSSERIAL
 
 # Install
 cd ~/catkin_ws/src
+
 git clone https://github.com/ros-drivers/rosserial.git -b noetic-devel
+
 git clone https://github.com/ros-teleop/teleop_tools.git -b kinetic-devel
 
 sudo usermod -a -G dialout $USER

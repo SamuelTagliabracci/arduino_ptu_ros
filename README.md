@@ -1,6 +1,8 @@
 # Description
 Generic Pan &amp; Tilt Servos controlled by Arduino Nano via ROSSERIAL
 
+# Flash sketch/arduino_ptu.ino onto an Arudino Nano using Arudino IDE
+
 # Install
 cd ~/catkin_ws/src
 

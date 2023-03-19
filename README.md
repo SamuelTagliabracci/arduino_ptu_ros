@@ -27,7 +27,7 @@ rostopic echo /ptu/jointstate
 
 # Sample joy_teleop.yaml addition
 
-teleop:
+>teleop:
   ptu:
     type: topic
     message_type: geometry_msgs/Twist

@@ -15,7 +15,7 @@ SUBSYSTEMS=="usb", ACTION=="add", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="75
 # Test
 rosrun rosserial_python serial_node.py _port:=/dev/arduino _baud:=115200
 
-# Test Topics
+# Sample Topics
 rostopic pub -1 /ptu/cmd_vel geometric_msgs/Twist
 rostopic echo /ptu/jointstate
 

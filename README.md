@@ -9,17 +9,17 @@ git clone https://github.com/ros-teleop/teleop_tools.git -b kinetic-devel
 sudo usermod -a -G dialout $USER
 sudo usermod -a -G tty $USER
 
-#Udev - Arduino Rule
+# Udev - Arduino Rule
 SUBSYSTEMS=="usb", ACTION=="add", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="7523", MODE="0666", SYMLINK+="arduino", GROUP="dialout"
 
-#Test
+# Test
 rosrun rosserial_python serial_node.py _port:=/dev/arduino _baud:=115200
 
-#Test Topics
+# Test Topics
 rostopic pub -1 /ptu/cmd_vel geometric_msgs/Twist
 rostopic echo /ptu/jointstate
 
-#Sample joy_teleop.yaml addition
+# Sample joy_teleop.yaml addition
 
 teleop:
   ptu:

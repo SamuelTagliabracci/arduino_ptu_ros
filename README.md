@@ -9,6 +9,7 @@ git clone https://github.com/ros-drivers/rosserial.git -b noetic-devel
 git clone https://github.com/ros-teleop/teleop_tools.git -b kinetic-devel
 
 sudo usermod -a -G dialout $USER
+
 sudo usermod -a -G tty $USER
 
 # Udev - Arduino Rule

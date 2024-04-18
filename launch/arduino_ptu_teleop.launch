@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+
+<launch>
+  <node pkg="arduino_ptu_ros" type="arduino_ptu_ros_teleop.py" name="arduino_ptu_ros_teleop" output="screen">
+  </node>
+</launch>
